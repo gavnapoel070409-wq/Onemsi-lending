@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'Nemsi Studio - Косметология</title>
+
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="header__logo">ОНЕМСИ</a>
+
+            <ul class="header__menu">
+                <li><a href="#services" class="header__menu-item">Услуги</a></li>
+                <li><a href="#certificates" class="header__menu-item">Сертификаты</a></li>
+                <li><a href="#reviews" class="header__menu-item">Отзывы</a></li>
+                <li><a href="#contacts" class="header__menu-item">Контакты</a></li>
+                <a href="#booking" class="header__cta">Записаться</a>
+            </ul>
+
+            <div class="header__icons">
+                <!-- Иконка телефона -->
+                <a href="tel:+79954910081" class="header__icon" aria-label="Позвонить">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                </a>
+                <!-- Иконка ВК -->
+                <a href="#" class="header__icon" aria-label="ВКонтакте">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.44-.86-.83-1.24-.94-1.45-.94-.3 0-.38.08-.38.5v1.31c0 .36-.11.57-1.05.57-1.55 0-3.27-.94-4.47-2.69-1.82-2.55-2.32-4.46-2.32-4.84 0-.21.08-.41.5-.41h1.46c.37 0 .51.17.65.57.72 2.08 1.92 3.91 2.41 3.91.19 0 .27-.08.27-.55V9.73c-.06-.97-.57-1.05-.57-1.4 0-.17.14-.34.37-.34h2.3c.31 0 .42.17.42.54v2.91c0 .31.14.42.23.42.19 0 .34-.11.69-.46 1.07-1.2 1.84-3.04 1.84-3.04.1-.21.27-.41.64-.41h1.46c.44 0 .54.23.44.54-.18.84-1.95 3.34-1.95 3.34-.15.24-.21.35 0 .62.15.21.66.65 1 1.04.62.72 1.1 1.32 1.23 1.74.13.42-.07.63-.49.63z" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Бургер-кнопка -->
+            <button class="header__burger" aria-label="Открыть меню">
+                <!-- Иконка бургера -->
+                <svg class="header__burger-icon header__burger-icon--menu" width="40" height="40" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20" stroke="#4A6B57" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 12H20" stroke="#4A6B57" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 18H20" stroke="#4A6B57" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <!-- Иконка крестика -->
+                <svg class="header__burger-icon header__burger-icon--close" width="40" height="40" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 6L18 18" stroke="#4A6B57" stroke-width="2" stroke-linecap="round" />
+                    <path d="M18 6L6 18" stroke="#4A6B57" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Мобильное меню -->
+        <nav class="header__mobile-menu">
+            <a href="#services" class="header__mobile-menu-item">Услуги</a>
+            <a href="#certificates" class="header__mobile-menu-item">Сертификаты</a>
+            <a href="#reviews" class="header__mobile-menu-item">Отзывы</a>
+            <a href="#contacts" class="header__mobile-menu-item">Контакты</a>
+            <a href="#booking" class="header__mobile-cta">Записаться</a>
+            <div class="header__mobile-icons">
+                <!-- Иконка телефона -->
+                <a href="tel:+79954910081" class="header__mobile-icon" aria-label="Позвонить">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                </a>
+                <!-- Иконка ВК -->
+                <a href="#" class="header__mobile-icon" aria-label="ВКонтакте">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.44-.86-.83-1.24-.94-1.45-.94-.3 0-.38.08-.38.5v1.31c0 .36-.11.57-1.05.57-1.55 0-3.27-.94-4.47-2.69-1.82-2.55-2.32-4.46-2.32-4.84 0-.21.08-.41.5-.41h1.46c.37 0 .51.17.65.57.72 2.08 1.92 3.91 2.41 3.91.19 0 .27-.08.27-.55V9.73c-.06-.97-.57-1.05-.57-1.4 0-.17.14-.34.37-.34h2.3c.31 0 .42.17.42.54v2.91c0 .31.14.42.23.42.19 0 .34-.11.69-.46 1.07-1.2 1.84-3.04 1.84-3.04.1-.21.27-.41.64-.41h1.46c.44 0 .54.23.44.54-.18.84-1.95 3.34-1.95 3.34-.15.24-.21.35 0 .62.15.21.66.65 1 1.04.62.72 1.1 1.32 1.23 1.74.13.42-.07.63-.49.63z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero секция -->
+    <section class="hero">
+        <div class="hero__background"></div>
+        <div class="hero__overlay"></div>
+
+        <div class="hero__content">
+            <h1 class="hero__title">Все лучшее для вашей кожи</h1>
+            <a href="#booking" class="hero__cta">Записаться онлайн</a>
+        </div>
+    </section>
+
+    <!-- Секция слайдера -->
+    <section class="gallery">
+        <div class="gallery__container">
+            <h2 class="gallery__title">Наши работы</h2>
+
+            <div class="slider">
+                <div class="slider__track">
+                    <!-- Слайд 1 -->
+                    <div class="slider__slide">
+                        <div class="slider__image-placeholder">
+                            <span>Фото 1</span>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 2 -->
+                    <div class="slider__slide">
+                        <div class="slider__image-placeholder">
+                            <span>Фото 2</span>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 3 -->
+                    <div class="slider__slide">
+                        <div class="slider__image-placeholder">
+                            <span>Фото 3</span>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 4 -->
+                    <div class="slider__slide">
+                        <div class="slider__image-placeholder">
+                            <span>Фото 4</span>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 5 -->
+                    <div class="slider__slide">
+                        <div class="slider__image-placeholder">
+                            <span>Фото 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Кнопки навигации -->
+                <button class="slider__button slider__button--prev" aria-label="Предыдущий слайд">
+                    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 7H14C17.3137 7 20 9.68629 20 13C20 16.3137 17.3137 19 14 19H4M4 7L8 3M4 7L8 11"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <button class="slider__button slider__button--next" aria-label="Следующий слайд">
+                    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 7H10C6.68629 7 4 9.68629 4 13C4 16.3137 6.68629 19 10 19H20M20 7L16 3M20 7L16 11"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+            </div>
+            <!-- Точки-индикаторы -->
+            <div class="slider__dots">
+                <button class="slider__dot active" data-index="0" aria-label="Слайд 1"></button>
+                <button class="slider__dot" data-index="1" aria-label="Слайд 2"></button>
+                <button class="slider__dot" data-index="2" aria-label="Слайд 3"></button>
+                <button class="slider__dot" data-index="3" aria-label="Слайд 4"></button>
+                <button class="slider__dot" data-index="4" aria-label="Слайд 5"></button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- Верхняя часть: информация + карта -->
+            <div class="footer__top">
+                <!-- Левая колонка: информация -->
+                <div class="footer__info">
+                    <div class="footer__schedule">
+                        <h3 class="footer__title">РЕЖИМ РАБОТЫ:</h3>
+                        <p class="footer__schedule-text">ЕЖЕДНЕВНО<br>С 9:00 ДО 21:00</p>
+                    </div>
+
+                    <div class="footer__address">
+                        <p>г. Пенза, ул. Московская, 103</p>
+                        <a href="tel:+79954910081" class="footer__phone">тел.: +7 (995) 491-00-81</a>
+                    </div>
+
+                    <div class="footer__icons">
+                        <!-- Иконка телефона -->
+                        <a href="tel:+79954910081" class="footer__icon" aria-label="Позвонить">
+                            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </a>
+                        <!-- Иконка ВК -->
+                        <a href="#" class="footer__icon" aria-label="ВКонтакте">
+                            <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.44-.86-.83-1.24-.94-1.45-.94-.3 0-.38.08-.38.5v1.31c0 .36-.11.57-1.05.57-1.55 0-3.27-.94-4.47-2.69-1.82-2.55-2.32-4.46-2.32-4.84 0-.21.08-.41.5-.41h1.46c.37 0 .51.17.65.57.72 2.08 1.92 3.91 2.41 3.91.19 0 .27-.08.27-.55V9.73c-.06-.97-.57-1.05-.57-1.4 0-.17.14-.34.37-.34h2.3c.31 0 .42.17.42.54v2.91c0 .31.14.42.23.42.19 0 .34-.11.69-.46 1.07-1.2 1.84-3.04 1.84-3.04.1-.21.27-.41.64-.41h1.46c.44 0 .54.23.44.54-.18.84-1.95 3.34-1.95 3.34-.15.24-.21.35 0 .62.15.21.66.65 1 1.04.62.72 1.1 1.32 1.23 1.74.13.42-.07.63-.49.63z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <p class="footer__disclaimer">
+                        Мы не осуществляем рекламную деятельность<br>
+                        на запрещённых в РФ платформах
+                    </p>
+                </div>
+
+                <!-- Правая колонка: Яндекс Карта -->
+                <div class="footer__map">
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae13239bbc30b264439ae08b6318549882cd62b064bf526dbd5a65f6173cc1b9c&amp;source=constructor"
+                        width="650" height="400" frameborder="0">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Нижняя часть: правовая информация -->
+            <div class="footer__bottom">
+                <div class="footer__legal">
+                    <h4 class="footer__legal-title">Правовая информация</h4>
+                    <ul class="footer__legal-list">
+                        <li><a href="#" class="footer__legal-link">Политика обработки персональных данных</a></li>
+                        <li><a href="#" class="footer__legal-link">Публичная оферта на оказание услуг</a></li>
+                        <li><a href="#" class="footer__legal-link">Согласие на получение рекламных сообщений</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__bottom-info">
+                    <a href="#" class="footer__logo-link">
+                        <span class="footer__logo">ОНЕМСИ</span>
+                    </a>
+                    <p class="footer__copyright">© 2024–2026. Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>
