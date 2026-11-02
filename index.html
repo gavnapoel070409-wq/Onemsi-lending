@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -106,7 +106,7 @@
     <!-- Секция слайдера -->
     <section class="gallery">
         <div class="gallery__container">
-            <h2 class="gallery__title">Наши работы</h2>
+            <h2 class="gallery__title">Наша косметология</h2>
 
             <div class="slider">
                 <div class="slider__track">
@@ -179,13 +179,24 @@
         <div class="services__container">
             <h2 class="services__title">Наши услуги</h2>
 
+            <!-- Табы -->
+            <div class="services__tabs">
+                <button class="services__tab active" data-category="relax">Расслабление</button>
+                <button class="services__tab" data-category="antiage">Омоложение</button>
+                <button class="services__tab" data-category="care">Уход</button>
+            </div>
+
             <!-- Раздел 1: Расслабление -->
-            <div class="services__category">
-                <h3 class="services__category-title">Расслабление</h3>
+            <div class="services__category active" data-category="relax">
+                <div class="services-slider">
+                    <button class="services-slider__button services-slider__button--prev" aria-label="Предыдущий">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
 
-                <div class="services-slider" data-slider="relax">
                     <div class="services-slider__track">
-
                         <div class="services-card">
                             <div class="services-card__content">
                                 <h4 class="services-card__title">Массаж скребками гуаша</h4>
@@ -198,7 +209,7 @@
                                 <p class="services-card__description">Улучшает кровообращение, снимает отёки и
                                     расслабляет мышцы.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> воспаления,
-                                    заболевания крови, купероз, повреждения кожи.</p>
+                                    заболевания крови, купероз.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
                             </div>
                         </div>
@@ -211,11 +222,9 @@
                                 </div>
                                 <p class="services-card__duration">30 мин</p>
                                 <p class="services-card__description">Улучшает кровообращение, укрепляет корни волос и
-                                    снижает выпадение. Нормализует состояние кожи головы, снимает напряжение и повышает
-                                    тонус.</p>
+                                    снижает выпадение.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> грибковые поражения,
-                                    воспаления, экзема, травмы головы, гипертония, жирная себорея и выраженное
-                                    облысение.</p>
+                                    воспаления, экзема.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
                             </div>
                         </div>
@@ -228,7 +237,7 @@
                                 </div>
                                 <p class="services-card__duration">20 мин</p>
                                 <p class="services-card__description">Глубокое расслабление с помощью эфирных масел.
-                                    Снимает стресс и улучшает сон.</p>
+                                    Снимает стресс.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> аллергия на эфирные
                                     масла, астма.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
@@ -242,10 +251,10 @@
                                     <span class="services-card__price-current">2200 ₽</span>
                                 </div>
                                 <p class="services-card__duration">60 мин</p>
-                                <p class="services-card__description">Массаж горячими камнями. Глубокое прогревание мышц
-                                    и полное расслабление.</p>
-                                <p class="services-card__contra"><strong>Противопоказания:</strong> варикоз, гипертония,
-                                    воспаления.</p>
+                                <p class="services-card__description">Массаж горячими камнями. Глубокое прогревание
+                                    мышц.</p>
+                                <p class="services-card__contra"><strong>Противопоказания:</strong> варикоз, гипертония.
+                                </p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
                             </div>
                         </div>
@@ -258,21 +267,14 @@
                                 </div>
                                 <p class="services-card__duration">90 мин</p>
                                 <p class="services-card__description">Древняя техника с элементами йоги. Восстанавливает
-                                    энергетический баланс.</p>
+                                    баланс.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> беременность, травмы
-                                    позвоночника, острые воспаления.</p>
+                                    позвоночника.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
                             </div>
                         </div>
-
                     </div>
 
-                    <button class="services-slider__button services-slider__button--prev" aria-label="Предыдущий">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                    </button>
                     <button class="services-slider__button services-slider__button--next" aria-label="Следующий">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -283,12 +285,16 @@
             </div>
 
             <!-- Раздел 2: Омоложение -->
-            <div class="services__category">
-                <h3 class="services__category-title">Омоложение</h3>
+            <div class="services__category" data-category="antiage">
+                <div class="services-slider">
+                    <button class="services-slider__button services-slider__button--prev" aria-label="Предыдущий">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
 
-                <div class="services-slider" data-slider="antiage">
                     <div class="services-slider__track">
-
                         <div class="services-card">
                             <div class="services-card__content">
                                 <h4 class="services-card__title">RF-лифтинг лица</h4>
@@ -311,8 +317,8 @@
                                     <span class="services-card__price-current">2800 ₽</span>
                                 </div>
                                 <p class="services-card__duration">40 мин</p>
-                                <p class="services-card__description">Возвращает тонус мышцам лица, снимает отёчность,
-                                    улучшает цвет кожи.</p>
+                                <p class="services-card__description">Возвращает тонус мышцам лица, снимает отёчность.
+                                </p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> кардиостимулятор,
                                     эпилепсия.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
@@ -326,8 +332,8 @@
                                     <span class="services-card__price-current">1800 ₽</span>
                                 </div>
                                 <p class="services-card__duration">30 мин</p>
-                                <p class="services-card__description">Интенсивное питание и увлажнение. Эффект заметен
-                                    после первой процедуры.</p>
+                                <p class="services-card__description">Интенсивное питание и увлажнение. Эффект после
+                                    первой процедуры.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> индивидуальная
                                     непереносимость.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
@@ -341,10 +347,9 @@
                                     <span class="services-card__price-current">2500 ₽</span>
                                 </div>
                                 <p class="services-card__duration">40 мин</p>
-                                <p class="services-card__description">Обновление кожи, выравнивание тона и текстуры.
-                                    Стимулирует выработку коллагена.</p>
+                                <p class="services-card__description">Обновление кожи, выравнивание тона и текстуры.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> активные воспаления,
-                                    герпес, свежий загар.</p>
+                                    герпес.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
                             </div>
                         </div>
@@ -356,22 +361,14 @@
                                     <span class="services-card__price-current">4500 ₽</span>
                                 </div>
                                 <p class="services-card__duration">60 мин</p>
-                                <p class="services-card__description">Инъекционное введение витаминных коктейлей.
-                                    Глубокое питание изнутри.</p>
+                                <p class="services-card__description">Инъекционное введение витаминных коктейлей.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> беременность,
-                                    нарушения свёртываемости крови.</p>
+                                    нарушения свёртываемости.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
                             </div>
                         </div>
-
                     </div>
 
-                    <button class="services-slider__button services-slider__button--prev" aria-label="Предыдущий">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                    </button>
                     <button class="services-slider__button services-slider__button--next" aria-label="Следующий">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -382,12 +379,16 @@
             </div>
 
             <!-- Раздел 3: Уход -->
-            <div class="services__category">
-                <h3 class="services__category-title">Уход</h3>
+            <div class="services__category" data-category="care">
+                <div class="services-slider">
+                    <button class="services-slider__button services-slider__button--prev" aria-label="Предыдущий">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
 
-                <div class="services-slider" data-slider="care">
                     <div class="services-slider__track">
-
                         <div class="services-card">
                             <div class="services-card__content">
                                 <h4 class="services-card__title">Тканевая маска</h4>
@@ -398,7 +399,7 @@
                                 <p class="services-card__description">Глубоко питают кожу, делают её более гладкой и
                                     свежей.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> жирная проблемная
-                                    кожа без противовоспалительных компонентов в составе.</p>
+                                    кожа.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
                             </div>
                         </div>
@@ -410,10 +411,10 @@
                                     <span class="services-card__price-current">1100 ₽</span>
                                 </div>
                                 <p class="services-card__note">+15 минут к основной процедуре</p>
-                                <p class="services-card__description">Интенсивно питают и увлажняют, особенно полезны
-                                    для сухой кожи.</p>
+                                <p class="services-card__description">Интенсивно питают и увлажняют, особенно для сухой
+                                    кожи.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> индивидуальная
-                                    непереносимость компонентов.</p>
+                                    непереносимость.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
                             </div>
                         </div>
@@ -441,7 +442,7 @@
                                 </div>
                                 <p class="services-card__duration">60 мин</p>
                                 <p class="services-card__description">Комбинированная чистка. Освобождает поры,
-                                    выравнивает рельеф кожи.</p>
+                                    выравнивает рельеф.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> активные воспаления,
                                     герпес.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
@@ -456,21 +457,14 @@
                                 </div>
                                 <p class="services-card__duration">45 мин</p>
                                 <p class="services-card__description">Отшелушивание и обновление кожи тела. Мягкость и
-                                    гладкость надолго.</p>
+                                    гладкость.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> повреждения кожи,
                                     варикоз.</p>
                                 <a href="#booking" class="services-card__btn">Записаться</a>
                             </div>
                         </div>
-
                     </div>
 
-                    <button class="services-slider__button services-slider__button--prev" aria-label="Предыдущий">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                    </button>
                     <button class="services-slider__button services-slider__button--next" aria-label="Следующий">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -536,12 +530,12 @@
             <!-- Нижняя часть: правовая информация -->
             <div class="footer__bottom">
                 <div class="footer__legal">
-                    <h4 class="footer__legal-title">Правовая информация</h4>
+                    <!-- <h4 class="footer__legal-title">Правовая информация</h4>
                     <ul class="footer__legal-list">
                         <li><a href="#" class="footer__legal-link">Политика обработки персональных данных</a></li>
                         <li><a href="#" class="footer__legal-link">Публичная оферта на оказание услуг</a></li>
                         <li><a href="#" class="footer__legal-link">Согласие на получение рекламных сообщений</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
 
                 <div class="footer__bottom-info">
@@ -554,7 +548,7 @@
         </div>
     </footer>
 
-    <script src="/main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
