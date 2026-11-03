@@ -317,7 +317,7 @@ body.menu-open {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('image/фон-хиро.jpg');
+    background-image: url('/image/фон-хиро.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1126,6 +1126,506 @@ body.menu-open {
     .services__tab {
         font-size: 13px;
         padding: 8px 20px;
+    }
+}
+
+
+/* === Секция сертификатов === */
+.certificates {
+    padding: 80px 0;
+    background-color: var(--color-primary);
+    overflow: hidden;
+}
+
+.cert-slider.no-anim .cert-slider__track,
+.cert-slider.no-anim .cert-slider__slide {
+    transition: none;
+}
+
+.certificates__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.certificates__title {
+    font-family: var(--font-logo);
+    font-size: 48px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cert-slider {
+    position: relative;
+}
+
+.cert-slider__viewport {
+    overflow: hidden;
+}
+
+.cert-slider__track {
+    display: flex;
+    gap: 40px;
+    transition: transform 0.6s ease;
+    will-change: transform;
+}
+
+/* Слайд: по умолчанию замылен и уменьшен (соседние) */
+.cert-slider__slide {
+    position: relative;
+    flex: 0 0 auto;
+    width: min(720px, 72%);
+    filter: blur(6px);
+    opacity: 0.45;
+    transform: scale(0.88);
+    transition: filter 0.6s ease, transform 0.6s ease, opacity 0.6s ease;
+    z-index: 1;
+}
+
+/* Активный слайд: чёткий, крупный, поверх остальных */
+.cert-slider__slide.active {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.cert-slider__slide img {
+    display: block;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Кнопки навигации */
+.cert-slider__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.cert-slider__button svg {
+    width: 22px;
+    height: 22px;
+}
+
+.cert-slider__button:hover {
+    background: #FFFFFF;
+    color: var(--color-primary);
+}
+
+.cert-slider__button--prev {
+    left: 20px;
+}
+
+.cert-slider__button--next {
+    right: 20px;
+}
+
+.cert-slider__button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.cert-slider__button:disabled:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+}
+
+/* Точки и счётчик */
+.cert-slider__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.cert-slider__dots {
+    display: flex;
+    gap: 10px;
+}
+
+.cert-slider__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cert-slider__dot.active {
+    background: #FFFFFF;
+    width: 28px;
+    border-radius: 6px;
+}
+
+.cert-slider__counter {
+    font-family: var(--font-body);
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* === Адаптивность === */
+@media (max-width: 1200px) {
+    .cert-slider__slide img {
+        height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .certificates {
+        padding: 60px 0;
+    }
+
+    .certificates__container {
+        padding: 0 24px;
+    }
+
+    .certificates__title {
+        font-size: 32px;
+        margin-bottom: 36px;
+    }
+
+    .cert-slider__slide {
+        width: 86%;
+    }
+
+    .cert-slider__slide img {
+        height: 320px;
+        border-radius: 14px;
+    }
+
+    .cert-slider__button {
+        width: 42px;
+        height: 42px;
+    }
+
+    .cert-slider__button--prev {
+        left: 8px;
+    }
+
+    .cert-slider__button--next {
+        right: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificates__title {
+        font-size: 26px;
+    }
+
+    .cert-slider__slide img {
+        height: 240px;
+    }
+
+    .cert-slider__footer {
+        gap: 16px;
+        margin-top: 28px;
+    }
+}
+
+/* === Секция О нас === */
+.about {
+    padding: 100px 0;
+    background-color: var(--color-bg);
+}
+
+.about__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 480px 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+/* Фото с рамкой */
+.about__photo {
+    position: relative;
+}
+
+/* Смещённый контур позади фото */
+.about__photo::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -24px;
+    right: 24px;
+    bottom: -24px;
+    border: 2px solid var(--color-primary);
+    border-radius: 24px;
+    z-index: 0;
+}
+
+.about__photo-frame {
+    position: relative;
+    z-index: 1;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(74, 107, 87, 0.25);
+}
+
+.about__photo-frame img {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.about__photo-frame:hover img {
+    transform: scale(1.03);
+}
+
+/* Бейдж с опытом */
+.about__photo-badge {
+    position: absolute;
+    left: -36px;
+    bottom: 48px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #FFFFFF;
+    padding: 18px 26px;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.about__badge-number {
+    font-family: var(--font-logo);
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.about__badge-text {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.4;
+}
+
+/* Текстовый блок */
+.about__label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.about__title {
+    font-family: var(--font-logo);
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 28px;
+}
+
+.about__text p {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: rgba(0, 0, 0, 0.75);
+    margin-bottom: 16px;
+}
+
+.about__quote {
+    font-family: var(--font-logo);
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--color-primary-dark);
+    border-left: 3px solid var(--color-primary);
+    padding-left: 24px;
+    margin: 32px 0;
+}
+
+/* Преимущества */
+.about__features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 32px;
+    margin-bottom: 40px;
+}
+
+.about__features li {
+    position: relative;
+    padding-left: 36px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+.about__features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Подпись */
+.about__signature {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 28px;
+    border-top: 1px solid #E8EFEA;
+}
+
+.about__signature-name {
+    font-family: var(--font-logo);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.about__signature-role {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.5;
+}
+
+/* === Адаптивность === */
+@media (max-width: 1200px) {
+    .about__container {
+        grid-template-columns: 400px 1fr;
+        gap: 60px;
+        padding: 0 40px;
+    }
+
+    .about__photo-frame img {
+        height: 520px;
+    }
+
+    .about__title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about {
+        padding: 80px 0;
+    }
+
+    .about__container {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .about__photo {
+        max-width: 460px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .about__photo::before {
+        top: 18px;
+        left: -18px;
+        right: 18px;
+        bottom: -18px;
+    }
+
+    .about__photo-badge {
+        left: -12px;
+        bottom: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 60px 0;
+    }
+
+    .about__container {
+        padding: 0 24px;
+        gap: 50px;
+    }
+
+    .about__photo-frame img {
+        height: 440px;
+    }
+
+    .about__title {
+        font-size: 32px;
+    }
+
+    .about__quote {
+        font-size: 18px;
+    }
+
+    .about__features {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about__photo-frame img {
+        height: 380px;
+    }
+
+    .about__title {
+        font-size: 28px;
+    }
+
+    .about__photo-badge {
+        padding: 14px 20px;
+        left: -6px;
+    }
+
+    .about__badge-number {
+        font-size: 30px;
+    }
+
+    .about__signature {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 }
 

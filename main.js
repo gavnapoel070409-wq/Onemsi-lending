@@ -261,3 +261,86 @@ servicesSliders.forEach((slider) => {
 
 
 
+// === Слайдер сертификатов (единственная версия) ===
+(function () {
+    const slider = document.querySelector('.cert-slider');
+    if (!slider || slider.dataset.initialized) return;
+    slider.dataset.initialized = '1';
+
+    const viewport = slider.querySelector('.cert-slider__viewport');
+    const track = slider.querySelector('.cert-slider__track');
+    const slides = Array.from(track.querySelectorAll('.cert-slider__slide'));
+    const prevBtn = slider.querySelector('.cert-slider__button--prev');
+    const nextBtn = slider.querySelector('.cert-slider__button--next');
+    const dotsBox = document.querySelector('.cert-slider__dots');
+    const counter = document.querySelector('.cert-slider__counter');
+
+    let current = Math.max(0, slides.findIndex(s => s.classList.contains('active')));
+
+    // Точки
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'cert-slider__dot';
+        dot.setAttribute('aria-label', `Сертификат ${i + 1}`);
+        dot.addEventListener('click', () => go(i));
+        dotsBox.appendChild(dot);
+    });
+    const dots = Array.from(dotsBox.children);
+
+    function update() {
+        const slideWidth = slides[0].offsetWidth;
+        const viewportWidth = viewport.clientWidth;
+        const styles = getComputedStyle(track);
+        const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+
+        // Размеры ещё не готовы — повторяем на следующем кадре
+        if (!slideWidth || !viewportWidth) {
+            requestAnimationFrame(update);
+            return;
+        }
+
+        slides.forEach((s, i) => s.classList.toggle('active', i === current));
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        counter.textContent =
+            String(current + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
+
+        // Позиция из индекса: не может «потеряться»
+        const shift = current * (slideWidth + gap) - (viewportWidth - slideWidth) / 2;
+        track.style.transform = `translateX(${-shift}px)`;
+
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === slides.length - 1;
+    }
+
+    function go(index) {
+        const next = Math.min(Math.max(index, 0), slides.length - 1);
+        if (next === current) return;
+        current = next;
+        update();
+    }
+
+    nextBtn.addEventListener('click', () => go(current + 1));
+    prevBtn.addEventListener('click', () => go(current - 1));
+
+    // Свайп по 1 фото
+    let sx = 0;
+    viewport.addEventListener('touchstart', (e) => {
+        sx = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    viewport.addEventListener('touchend', (e) => {
+        const diff = sx - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 50) go(current + (diff > 0 ? 1 : -1));
+    }, { passive: true });
+
+    window.addEventListener('resize', update);
+    window.addEventListener('load', update);
+
+    // Первый рендер без анимации
+    slider.classList.add('no-anim');
+    update();
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => slider.classList.remove('no-anim'));
+    });
+})();
