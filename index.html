@@ -4,15 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O'Nemsi Studio - Косметология</title>
 
-    <!-- Подключение шрифтов -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Косметология в Пензе — студия ОНЕМСИ | Уход за кожей, массаж, чистка</title>
+    <meta name="description"
+        content="Студия косметологии O'NEMSI в Пензе: уход за кожей, массаж, чистка лица, пилинги и маски. Сертифицированные специалисты, косметика. Запись: +7 (995) 491-00-81">
+    <link rel="canonical" href="https://gavnapoel070409-wq.github.io/Onemsi-lending/">
+
+    <!-- Open Graph (красивые превью при отправке ссылки в мессенджеры/соцсети) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Косметология в Пензе — студия ОНЕМСИ">
+    <meta property="og:description"
+        content="Уход за кожей, массаж, чистка, пилинги. Косметика и бережный подход. Запишитесь онлайн!">
+    <meta property="og:url" content="https://gavnapoel070409-wq.github.io/Onemsi-lending/">
+    <meta property="og:image" content="https://gavnapoel070409-wq.github.io/Onemsi-lending/image/hero-bg.jpg">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Внешний вид в мобильном браузере -->
+    <meta name="theme-color" content="#4A6B57">
+
+    <!-- Фавиконка -->
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    <!-- Предзагрузка главного фото (LCP-элемент) -->
+    <link rel="preload" as="image" href="/image/hero-bg.jpg">
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<!-- Подключение шрифтов -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -24,7 +49,7 @@
             <ul class="header__menu">
                 <li><a href="#services" class="header__menu-item">Услуги</a></li>
                 <li><a href="#certificates" class="header__menu-item">Сертификаты</a></li>
-                <li><a href="#reviews" class="header__menu-item">О нас</a></li>
+                <li><a href="#informarion" class="header__menu-item">О нас</a></li>
                 <li><a href="#contacts" class="header__menu-item">Контакты</a></li>
                 <a href="#booking" class="header__cta">Записаться</a>
             </ul>
@@ -69,7 +94,7 @@
         <nav class="header__mobile-menu">
             <a href="#services" class="header__mobile-menu-item">Услуги</a>
             <a href="#certificates" class="header__mobile-menu-item">Сертификаты</a>
-            <a href="#reviews" class="header__mobile-menu-item">Отзывы</a>
+            <a href="#informarion" class="header__mobile-menu-item">О нас</a>
             <a href="#contacts" class="header__mobile-menu-item">Контакты</a>
             <a href="#booking" class="header__mobile-cta">Записаться</a>
             <div class="header__mobile-icons">
@@ -184,6 +209,7 @@
                 <button class="services__tab active" data-category="relax">Расслабление</button>
                 <button class="services__tab" data-category="antiage">Омоложение</button>
                 <button class="services__tab" data-category="care">Уход</button>
+                <button class="services__tab" data-category="correction">Коррекция фигуры</button>
             </div>
 
             <!-- Раздел 1: Расслабление -->
@@ -199,13 +225,12 @@
                     <div class="services-slider__track">
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Массаж скребками гуаша</h4>
+                                <h3 class="services-card__title">Массаж скребком гуаша</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">1900 ₽</span>
-                                    <span class="services-card__price-old">2 500 ₽</span>
+                                    <span class="services-card__price-current">1000 ₽</span>
                                 </div>
-                                <p class="services-card__note">Стоимость первого посещения</p>
-                                <p class="services-card__duration">40 мин</p>
+                                <!-- <p class="services-card__note">Стоимость первого посещения</p> -->
+                                <p class="services-card__duration">1 час</p>
                                 <p class="services-card__description">Улучшает кровообращение, снимает отёки и
                                     расслабляет мышцы.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> воспаления,
@@ -216,11 +241,11 @@
 
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Массаж головы</h4>
+                                <h3 class="services-card__title">Массажный комплекс "Нефертити"</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">1600 ₽</span>
+                                    <span class="services-card__price-current">2500 ₽</span>
                                 </div>
-                                <p class="services-card__duration">30 мин</p>
+                                <p class="services-card__duration">1 час 15 мин</p>
                                 <p class="services-card__description">Улучшает кровообращение, укрепляет корни волос и
                                     снижает выпадение.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> грибковые поражения,
@@ -231,11 +256,11 @@
 
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Ароматерапия</h4>
+                                <h3 class="services-card__title">Массаж шейно-воротниковой зоны</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">1200 ₽</span>
+                                    <span class="services-card__price-current">1000 ₽</span>
                                 </div>
-                                <p class="services-card__duration">20 мин</p>
+                                <p class="services-card__duration">1 час</p>
                                 <p class="services-card__description">Глубокое расслабление с помощью эфирных масел.
                                     Снимает стресс.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> аллергия на эфирные
@@ -246,11 +271,11 @@
 
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Стоун-массаж</h4>
+                                <h3 class="services-card__title">Массаж лица Классический</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">2200 ₽</span>
+                                    <span class="services-card__price-current">1800 ₽</span>
                                 </div>
-                                <p class="services-card__duration">60 мин</p>
+                                <p class="services-card__duration">1 час</p>
                                 <p class="services-card__description">Массаж горячими камнями. Глубокое прогревание
                                     мышц.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> варикоз, гипертония.
@@ -261,11 +286,11 @@
 
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Тайский массаж</h4>
+                                <h3 class="services-card__title">Японский массаж "Кабидо"</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">2800 ₽</span>
+                                    <span class="services-card__price-current">3000 ₽</span>
                                 </div>
-                                <p class="services-card__duration">90 мин</p>
+                                <p class="services-card__duration">1 час 30 мин</p>
                                 <p class="services-card__description">Древняя техника с элементами йоги. Восстанавливает
                                     баланс.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> беременность, травмы
@@ -297,11 +322,11 @@
                     <div class="services-slider__track">
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">RF-лифтинг лица</h4>
+                                <h3 class="services-card__title">RF-лифтинг лица и тела</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">3500 ₽</span>
+                                    <span class="services-card__price-current">от 790 ₽</span>
                                 </div>
-                                <p class="services-card__duration">45 мин</p>
+                                <p class="services-card__duration">1 час</p>
                                 <p class="services-card__description">Радиочастотное омоложение. Подтягивает кожу,
                                     уменьшает морщины.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> металлические
@@ -312,11 +337,11 @@
 
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Микротоковая терапия</h4>
+                                <h3 class="services-card__title">Микротоковая терапия</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">2800 ₽</span>
+                                    <span class="services-card__price-current">от 690 ₽</span>
                                 </div>
-                                <p class="services-card__duration">40 мин</p>
+                                <p class="services-card__duration">1 час</p>
                                 <p class="services-card__description">Возвращает тонус мышцам лица, снимает отёчность.
                                 </p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> кардиостимулятор,
@@ -327,26 +352,11 @@
 
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Коллагеновая маска</h4>
+                                <h3 class="services-card__title">Парафинотерапия рук</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">1800 ₽</span>
+                                    <span class="services-card__price-current">650 ₽</span>
                                 </div>
-                                <p class="services-card__duration">30 мин</p>
-                                <p class="services-card__description">Интенсивное питание и увлажнение. Эффект после
-                                    первой процедуры.</p>
-                                <p class="services-card__contra"><strong>Противопоказания:</strong> индивидуальная
-                                    непереносимость.</p>
-                                <a href="#booking" class="services-card__btn">Записаться</a>
-                            </div>
-                        </div>
-
-                        <div class="services-card">
-                            <div class="services-card__content">
-                                <h4 class="services-card__title">Пилинг лица</h4>
-                                <div class="services-card__price">
-                                    <span class="services-card__price-current">2500 ₽</span>
-                                </div>
-                                <p class="services-card__duration">40 мин</p>
+                                <p class="services-card__duration">1 час</p>
                                 <p class="services-card__description">Обновление кожи, выравнивание тона и текстуры.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> активные воспаления,
                                     герпес.</p>
@@ -356,11 +366,25 @@
 
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Мезотерапия</h4>
+                                <h3 class="services-card__title">Безинъекционная мезотерапия</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">4500 ₽</span>
+                                    <span class="services-card__price-current">от 2200 ₽</span>
                                 </div>
-                                <p class="services-card__duration">60 мин</p>
+                                <p class="services-card__duration">1 час</p>
+                                <p class="services-card__description">Инъекционное введение витаминных коктейлей.</p>
+                                <p class="services-card__contra"><strong>Противопоказания:</strong> беременность,
+                                    нарушения свёртываемости.</p>
+                                <a href="#booking" class="services-card__btn">Записаться</a>
+                            </div>
+                        </div>
+
+                        <div class="services-card">
+                            <div class="services-card__content">
+                                <h3 class="services-card__title">Безинъекционная мезотерапия вокруг глаз</h3>
+                                <div class="services-card__price">
+                                    <span class="services-card__price-current">850 ₽</span>
+                                </div>
+                                <p class="services-card__duration">15 мин</p>
                                 <p class="services-card__description">Инъекционное введение витаминных коктейлей.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> беременность,
                                     нарушения свёртываемости.</p>
@@ -391,11 +415,11 @@
                     <div class="services-slider__track">
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Тканевая маска</h4>
+                                <h3 class="services-card__title">Маска для лица</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">450 ₽</span>
+                                    <span class="services-card__price-current">от 350 ₽</span>
                                 </div>
-                                <p class="services-card__note">+15 минут к основной процедуре</p>
+                                <p class="services-card__duration">30 мин</p>
                                 <p class="services-card__description">Глубоко питают кожу, делают её более гладкой и
                                     свежей.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> жирная проблемная
@@ -406,11 +430,11 @@
 
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Кремовая маска</h4>
+                                <h3 class="services-card__title">Холодная плазма</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">1100 ₽</span>
+                                    <span class="services-card__price-current">от 2200 ₽</span>
                                 </div>
-                                <p class="services-card__note">+15 минут к основной процедуре</p>
+                                <p class="services-card__duration">1 час</p>
                                 <p class="services-card__description">Интенсивно питают и увлажняют, особенно для сухой
                                     кожи.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> индивидуальная
@@ -421,26 +445,11 @@
 
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Альгинатная маска</h4>
+                                <h3 class="services-card__title">Космплесная чистка</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">1200 ₽</span>
+                                    <span class="services-card__price-current">3500 ₽</span>
                                 </div>
-                                <p class="services-card__note">+15 минут к основной процедуре</p>
-                                <p class="services-card__description">Быстрый лифтинг-эффект, питание витаминами и
-                                    минералами.</p>
-                                <p class="services-card__contra"><strong>Противопоказания:</strong> аллергия на состав.
-                                </p>
-                                <a href="#booking" class="services-card__btn">Записаться</a>
-                            </div>
-                        </div>
-
-                        <div class="services-card">
-                            <div class="services-card__content">
-                                <h4 class="services-card__title">Чистка лица</h4>
-                                <div class="services-card__price">
-                                    <span class="services-card__price-current">2200 ₽</span>
-                                </div>
-                                <p class="services-card__duration">60 мин</p>
+                                <p class="services-card__duration">2 часа</p>
                                 <p class="services-card__description">Комбинированная чистка. Освобождает поры,
                                     выравнивает рельеф.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> активные воспаления,
@@ -451,11 +460,138 @@
 
                         <div class="services-card">
                             <div class="services-card__content">
-                                <h4 class="services-card__title">Пилинг тела</h4>
+                                <h3 class="services-card__title">Гидропилинг</h3>
                                 <div class="services-card__price">
-                                    <span class="services-card__price-current">1800 ₽</span>
+                                    <span class="services-card__price-current">3000 ₽</span>
                                 </div>
-                                <p class="services-card__duration">45 мин</p>
+                                <p class="services-card__duration">1 час 30 минут</p>
+                                <p class="services-card__description">Быстрый лифтинг-эффект, питание витаминами и
+                                    минералами.</p>
+                                <p class="services-card__contra"><strong>Противопоказания:</strong> аллергия на состав.
+                                </p>
+                                <a href="#booking" class="services-card__btn">Записаться</a>
+                            </div>
+                        </div>
+
+                        <div class="services-card">
+                            <div class="services-card__content">
+                                <h3 class="services-card__title">Пилинг тела</h3>
+                                <div class="services-card__price">
+                                    <span class="services-card__price-current">от 650 ₽</span>
+                                </div>
+                                <p class="services-card__duration">от 30 мин</p>
+                                <p class="services-card__description">Отшелушивание и обновление кожи тела. Мягкость и
+                                    гладкость.</p>
+                                <p class="services-card__contra"><strong>Противопоказания:</strong> повреждения кожи,
+                                    варикоз.</p>
+                                <a href="#booking" class="services-card__btn">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="services-slider__button services-slider__button--next" aria-label="Следующий">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Раздел 4: Коррекция -->
+            <div class="services__category" data-category="correction">
+                <div class="services-slider">
+                    <button class="services-slider__button services-slider__button--prev" aria-label="Предыдущий">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="services-slider__track">
+                        <div class="services-card">
+                            <div class="services-card__content">
+                                <h3 class="services-card__title">Антицеллюлитное обёртывание</h3>
+                                <div class="services-card__price">
+                                    <span class="services-card__price-current">990 ₽</span>
+                                </div>
+                                <p class="services-card__duration">1 час</p>
+                                <p class="services-card__description">Глубоко питают кожу, делают её более гладкой и
+                                    свежей.</p>
+                                <p class="services-card__contra"><strong>Противопоказания:</strong> жирная проблемная
+                                    кожа.</p>
+                                <a href="#booking" class="services-card__btn">Записаться</a>
+                            </div>
+                        </div>
+
+                        <div class="services-card">
+                            <div class="services-card__content">
+                                <h3 class="services-card__title">Вакуумный массаж</h3>
+                                <div class="services-card__price">
+                                    <span class="services-card__price-current">от 1290 ₽</span>
+                                </div>
+                                <p class="services-card__duration">1 час</p>
+                                <p class="services-card__description">Интенсивно питают и увлажняют, особенно для сухой
+                                    кожи.</p>
+                                <p class="services-card__contra"><strong>Противопоказания:</strong> индивидуальная
+                                    непереносимость.</p>
+                                <a href="#booking" class="services-card__btn">Записаться</a>
+                            </div>
+                        </div>
+
+                        <div class="services-card">
+                            <div class="services-card__content">
+                                <h3 class="services-card__title">Кавитация</h3>
+                                <div class="services-card__price">
+                                    <span class="services-card__price-current">от 1290 ₽</span>
+                                </div>
+                                <p class="services-card__duration">1 час</p>
+                                <p class="services-card__description">Комбинированная чистка. Освобождает поры,
+                                    выравнивает рельеф.</p>
+                                <p class="services-card__contra"><strong>Противопоказания:</strong> активные воспаления,
+                                    герпес.</p>
+                                <a href="#booking" class="services-card__btn">Записаться</a>
+                            </div>
+                        </div>
+
+                        <div class="services-card">
+                            <div class="services-card__content">
+                                <h3 class="services-card__title">Вибромассаж</h3>
+                                <div class="services-card__price">
+                                    <span class="services-card__price-current">от 1290 ₽</span>
+                                </div>
+                                <p class="services-card__duration">1 час</p>
+                                <p class="services-card__description">Быстрый лифтинг-эффект, питание витаминами и
+                                    минералами.</p>
+                                <p class="services-card__contra"><strong>Противопоказания:</strong> аллергия на состав.
+                                </p>
+                                <a href="#booking" class="services-card__btn">Записаться</a>
+                            </div>
+                        </div>
+
+                        <div class="services-card">
+                            <div class="services-card__content">
+                                <h3 class="services-card__title">Миостимуляция</h3>
+                                <div class="services-card__price">
+                                    <span class="services-card__price-current">1200 ₽</span>
+                                </div>
+                                <p class="services-card__duration">1 час</p>
+                                <p class="services-card__description">Отшелушивание и обновление кожи тела. Мягкость и
+                                    гладкость.</p>
+                                <p class="services-card__contra"><strong>Противопоказания:</strong> повреждения кожи,
+                                    варикоз.</p>
+                                <a href="#booking" class="services-card__btn">Записаться</a>
+                            </div>
+                        </div>
+
+                        <div class="services-card">
+                            <div class="services-card__content">
+                                <h3 class="services-card__title">Карамельная коррекция</h3>
+                                <div class="services-card__price">
+                                    <span class="services-card__price-current">от 1250 ₽</span>
+                                </div>
+                                <p class="services-card__duration">1 час</p>
                                 <p class="services-card__description">Отшелушивание и обновление кожи тела. Мягкость и
                                     гладкость.</p>
                                 <p class="services-card__contra"><strong>Противопоказания:</strong> повреждения кожи,
@@ -533,57 +669,60 @@
     </section>
 
     <!-- Секция О нас -->
-<section class="about" id="about">
-    <div class="about__container">
-        
-        <!-- Фото владельца -->
-        <div class="about__photo">
-            <div class="about__photo-frame">
-                <!-- Заглушка, позже замени src на /image/oksana.jpg -->
-                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='750'><rect width='600' height='750' fill='%23E8EFEA'/><circle cx='300' cy='270' r='110' fill='%234A6B57' opacity='0.3'/><path d='M110 750c0-105 85-190 190-190s190 85 190 190' fill='%234A6B57' opacity='0.3'/><text x='300' y='660' font-size='32' fill='%234A6B57' text-anchor='middle' font-family='Georgia, serif'>Фото Оксаны</text></svg>" alt="Оксана — основатель студии O'NEMSI">
+    <section class="about" id="">
+        <div class="about__container">
+
+            <div class="about__photo">
+                <div class="about__photo-frame">
+                    <!-- Заглушка, позже замени src на /image/oksana.jpg -->
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='750'><rect width='600' height='750' fill='%23E8EFEA'/><circle cx='300' cy='270' r='110' fill='%234A6B57' opacity='0.3'/><path d='M110 750c0-105 85-190 190-190s190 85 190 190' fill='%234A6B57' opacity='0.3'/><text x='300' y='660' font-size='32' fill='%234A6B57' text-anchor='middle' font-family='Georgia, serif'>Фото Оксаны</text></svg>"
+                        alt="Оксана Станиславовна Стюхина — основатель студии ОНЕМСИ">
+                </div>
+                <div class="about__photo-badge">
+                    <span class="about__badge-number">10+</span>
+                    <span class="about__badge-text">лет опыта<br>в косметологии</span>
+                </div>
             </div>
-            <div class="about__photo-badge">
-                <span class="about__badge-number">10+</span>
-                <span class="about__badge-text">лет опыта<br>в косметологии</span>
+
+            <!-- Текстовый блок -->
+            <div class="about__content" id="informarion">
+                <span class="about__label">Знакомство</span>
+                <h2 class="about__title">О нас</h2>
+
+                <div class="about__text">
+                    <p>Студия ОНЕМСИ — это пространство красоты и спокойствия в самом сердце Пензы. Здесь нет суеты и
+                        конвейера: есть только вы, бережный уход и внимание к каждой детали.</p>
+                    <p>Основатель студии Оксана Станиславовна Стюхина — сертифицированный косметолог с медицинским
+                        подходом к делу. Она лично
+                        подбирает программы ухода, следит за новейшими методиками и постоянно совершенствуется, чтобы
+                        дарить вашей коже лучший результат.</p>
+                </div>
+
+                <blockquote class="about__quote">
+                    «Моя главная цель — чтобы каждый гость уходил не только с красивой кожей, но и с ощущением полной
+                    расслабленности и заботы»
+                </blockquote>
+
+                <ul class="about__features">
+                    <li>Сертифицированная косметика премиум-класса</li>
+                    <li>Индивидуальная программа для каждого клиента</li>
+                    <li>Стерильная чистота и одноразовые расходники</li>
+                    <li>Атмосфера уюта и полного доверия</li>
+                </ul>
+
+                <div class="about__signature">
+                    <span class="about__signature-name">Оксана Стюхина</span>
+                    <span class="about__signature-role">основатель и главный<br>косметолог студии ОНЕМСИ</span>
+                </div>
             </div>
+
         </div>
-
-        <!-- Текстовый блок -->
-        <div class="about__content">
-            <span class="about__label">Знакомство</span>
-            <h2 class="about__title">О нас и о главном</h2>
-
-            <div class="about__text">
-                <p>Студия O'NEMSI — это пространство красоты и спокойствия в самом сердце Пензы. Здесь нет суеты и конвейера: есть только вы, бережный уход и внимание к каждой детали.</p>
-                <p>Основатель студии Оксана — сертифицированный косметолог с медицинским подходом к делу. Она лично подбирает программы ухода, следит за новейшими методиками и постоянно совершенствуется, чтобы дарить вашей коже лучший результат.</p>
-            </div>
-
-            <blockquote class="about__quote">
-                «Моя главная цель — чтобы каждый гость уходил не только с красивой кожей, но и с ощущением полной расслабленности и заботы»
-            </blockquote>
-
-            <ul class="about__features">
-                <li>Сертифицированная косметика премиум-класса</li>
-                <li>Индивидуальная программа для каждого клиента</li>
-                <li>Стерильная чистота и одноразовые расходники</li>
-                <li>Атмосфера уюта и полного доверия</li>
-            </ul>
-
-            <div class="about__signature">
-                <span class="about__signature-name">Оксана</span>
-                <span class="about__signature-role">основатель и главный<br>косметолог студии O'NEMSI</span>
-            </div>
-        </div>
-
-    </div>
-</section>
+    </section>
 
     <!-- Футер -->
     <footer class="footer" id="contacts">
         <div class="footer__container">
-            <!-- Верхняя часть: информация + карта -->
             <div class="footer__top">
-                <!-- Левая колонка: информация -->
                 <div class="footer__info">
                     <div class="footer__schedule">
                         <h3 class="footer__title">РЕЖИМ РАБОТЫ:</h3>
@@ -596,7 +735,6 @@
                     </div>
 
                     <div class="footer__icons">
-                        <!-- Иконка телефона -->
                         <a href="tel:+79954910081" class="footer__icon" aria-label="Позвонить">
                             <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
@@ -604,7 +742,6 @@
                                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                             </svg>
                         </a>
-                        <!-- Иконка ВК -->
                         <a href="https://vk.ru/onemsi_studio" class="footer__icon" aria-label="ВКонтакте">
                             <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path
@@ -619,24 +756,16 @@
                     </p>
                 </div>
 
-                <!-- Правая колонка: Яндекс Карта -->
                 <div class="footer__map">
-                    <iframe id="map_591059636" frameborder="0" width="650px" height="400px"
-                        src="https://makemap.2gis.ru/widget?data=eJw1j09PwzAMxb-LOa6a0n9p09tUBGNMUysOINAOVWO2SGlSpRliVP3uuB34ZPm9Z_88gnUSHcpHtB16p3CA4mMEf-0RCnjAxl8cQgC9sz06v-gjtFZbR_rdZ8J4FpPulddzglqJQ-tU75U1NKi2mxV73tbDoczYPqu_Xu5r40vJdm-1OZRntjvl-3izouDPk5H4DUXI_msK4HQDu85n_6gqq4wnf2sJXpnGL9BJumahYCkP0ngdMWqyI-WVhELwaDoG0DV9ZQd1AxtBNx6KmzfLueBChCLNAtCzvGzLE8F5mIiUi4jwrO0IjtNSetBq_XpG1O_L1LsLTr_LHWT8"
+                    <iframe id="map_683723147" loading="lazy" frameborder="0" width="650px" height="400px"
+                        src="https://makemap.2gis.ru/widget?data=eJw1j09PwzAMxb-LOa6a0j9JaG9TEYwxTa04gEA7VK3ZIqVJlXqIUfW7k7bDJ8vvPfvnAaxr0GHzhLZFcgp7yD4HoGuHkMEjVnRxCAF0znboaNYHqK22zut3CcovwbxOivSU8G2Dfe1UR8oaPyi2mxV72Zb9IZdsL8vv14fSUN6w3XtpDvmZ7U73-3iz8sHfZ9PgD2Qh-68xgNMCdp3O3qgKqwx5f209vDIVzdAJX7MwDWUU8HgdMRZFRx9XDWRJwsZjAG3VFbZXC9cAuiLIblYhZCpSLkQcgJ7kZVkU8piJmKWcc49nbevhpN_qH7Rav50R9cc8JXfB8Q_072T8"
                         sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation">
                     </iframe>
                 </div>
             </div>
 
-            <!-- Нижняя часть: правовая информация -->
             <div class="footer__bottom">
                 <div class="footer__legal">
-                    <!-- <h4 class="footer__legal-title">Правовая информация</h4>
-                    <ul class="footer__legal-list">
-                        <li><a href="#" class="footer__legal-link">Политика обработки персональных данных</a></li>
-                        <li><a href="#" class="footer__legal-link">Публичная оферта на оказание услуг</a></li>
-                        <li><a href="#" class="footer__legal-link">Согласие на получение рекламных сообщений</a></li>
-                    </ul> -->
                 </div>
 
                 <div class="footer__bottom-info">
@@ -650,6 +779,26 @@
     </footer>
 
     <script src="main.js"></script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "O'NEMSI",
+    "description": "Студия косметологии в Пензе: уход за кожей, массаж, чистка, пилинги",
+    "telephone": "+7 995 491-00-81",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Московская, 103",
+        "addressLocality": "Пенза",
+        "addressCountry": "RU"
+    },
+    "openingHours": "Mo-Su 09:00-21:00",
+    "priceRange": "₽₽",
+    "url": "https://gavnapoel070409-wq.github.io/Onemsi-lending/"
+}
+</script>
+
 </body>
 
 </html>

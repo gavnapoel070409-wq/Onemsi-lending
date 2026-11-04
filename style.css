@@ -1,4 +1,4 @@
-/* CSS переменные */
+
 :root {
     --color-primary: #4A6B57;
     --color-primary-dark: #3A5544;
@@ -7,6 +7,64 @@
     --font-logo: 'Playfair Display', serif;
     --font-body: 'Montserrat', sans-serif;
 }
+
+@font-face {
+    font-family: 'Playfair Display', serif;
+    src: url(/fonts/PlayfairDisplay-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Playfair Display', serif;
+    src: url(/fonts/PlayfairDisplay-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Playfair Display', serif;
+    src: url(/fonts/PlayfairDisplay-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Playfair Display', serif;
+    src: url(/fonts/PlayfairDisplay-Italic.ttf) format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Playfair Display', serif;
+    src: url(/fonts/PlayfairDisplay-MediumItalic.ttf) format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(/fonts/Montserrat-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(/fonts/Montserrat-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(/fonts/Montserrat-SemiBold.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 * {
     margin: 0;
@@ -25,7 +83,12 @@ body.menu-open {
     overflow: hidden;
 }
 
-/* Хедер */
+:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -46,7 +109,6 @@ body.menu-open {
     position: relative;
 }
 
-/* Логотип */
 .header__logo {
     font-family: var(--font-logo);
     font-size: 35px;
@@ -56,7 +118,6 @@ body.menu-open {
     letter-spacing: 1px;
 }
 
-/* Меню */
 .header__menu {
     display: flex;
     list-style: none;
@@ -93,7 +154,6 @@ body.menu-open {
     width: 100%;
 }
 
-/* Кнопка записи */
 .header__cta {
     font-family: var(--font-body);
     font-size: 16px;
@@ -125,7 +185,6 @@ body.menu-open {
         0 0 15px rgba(74, 107, 87, 0.3);
 }
 
-/* Иконки соцсетей */
 .header__icons {
     display: flex;
     gap: 20px;
@@ -147,7 +206,6 @@ body.menu-open {
     height: 27px;
 }
 
-/* ВК сделаем чуть крупнее, как было */
 .header__icon:last-child svg {
     width: 30px;
     height: 30px;
@@ -159,7 +217,6 @@ body.menu-open {
     transform: translateY(-2px) scale(1.1);
 }
 
-/* Бургер-меню (SVG) */
 .header__burger {
     display: none;
     align-items: center;
@@ -213,7 +270,6 @@ body.menu-open {
     pointer-events: auto;
 }
 
-/* Мобильное меню */
 .header__mobile-menu {
     position: fixed;
     top: 0;
@@ -278,7 +334,6 @@ body.menu-open {
     align-items: center;
     justify-content: center;
     color: var(--color-primary);
-    /* <-- ЭТО ГЛАВНОЕ: задаёт цвет для SVG */
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -298,7 +353,6 @@ body.menu-open {
     transform: scale(1.1);
 }
 
-/* Hero секция */
 .hero {
     position: relative;
     width: 100%;
@@ -317,7 +371,7 @@ body.menu-open {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/image/фон-хиро.jpg');
+    background-image: url('/image/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -380,7 +434,6 @@ body.menu-open {
     box-shadow: 0 4px 12px rgba(74, 107, 87, 0.3);
 }
 
-/* Адаптивность Шапка + Хиро */
 @media (max-width: 1200px) {
     .header__container {
         padding: 24px 40px;
@@ -407,12 +460,11 @@ body.menu-open {
         padding: 24px 30px;
     }
 
-    /* Логотип — первая колонка, прижат влево */
     .header__logo {
         justify-content: start;
     }
 
-    /* Бургер — вторая колонка, точно по центру */
+
     .header__burger {
         display: flex;
         justify-content: end;
@@ -427,7 +479,6 @@ body.menu-open {
         z-index: 1001;
     }
 
-    /* Иконки — третья колонка, прижаты вправо */
     .header__icons {
         display: none;
     }
@@ -477,7 +528,6 @@ body.menu-open {
     }
 }
 
-/* Секция галереи */
 .gallery {
     padding: 80px 0;
     background-color: var(--color-bg);
@@ -498,7 +548,6 @@ body.menu-open {
     margin-bottom: 60px;
 }
 
-/* Слайдер */
 .slider {
     position: relative;
     width: 100%;
@@ -515,7 +564,6 @@ body.menu-open {
     padding: 0 10px;
 }
 
-/* Placeholder для фотографий (пока нет реальных фото) */
 .slider__image-placeholder {
     width: 100%;
     height: 500px;
@@ -536,7 +584,6 @@ body.menu-open {
     box-shadow: 0 8px 24px rgba(74, 107, 87, 0.15);
 }
 
-/* Кнопки навигации */
 .slider__button {
     position: absolute;
     top: 50%;
@@ -578,7 +625,6 @@ body.menu-open {
     right: 20px;
 }
 
-/* Точки-индикаторы */
 .slider__dots {
     display: flex;
     justify-content: center;
@@ -607,7 +653,6 @@ body.menu-open {
     transform: scale(1.2);
 }
 
-/* Адаптивность слайдера */
 @media (max-width: 1200px) {
     .gallery__container {
         padding: 0 40px;
@@ -724,7 +769,6 @@ body.menu-open {
 }
 
 
-/* === Секция услуг === */
 .services {
     padding: 80px 0;
     background-color: var(--color-bg);
@@ -745,7 +789,6 @@ body.menu-open {
     margin-bottom: 40px;
 }
 
-/* Табы */
 .services__tabs {
     display: flex;
     justify-content: center;
@@ -777,7 +820,6 @@ body.menu-open {
     color: #FFFFFF;
 }
 
-/* Категории */
 .services__category {
     display: none;
 }
@@ -786,7 +828,7 @@ body.menu-open {
     display: block;
 }
 
-/* Слайдер */
+
 .services-slider {
     position: relative;
     display: flex;
@@ -809,7 +851,6 @@ body.menu-open {
     justify-content: center;
 }
 
-/* Карточка */
 .services-card {
     display: none;
     flex: 0 0 calc((100% - 48px) / 3);
@@ -820,7 +861,6 @@ body.menu-open {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Видимая карточка текущей страницы */
 .services-card.visible {
     display: block;
     animation: servicesCardAppear 0.4s ease;
@@ -843,7 +883,6 @@ body.menu-open {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
-/* Чередование на десктопе и планшете */
 .services-card:nth-child(even) {
     background-color: var(--color-primary);
     color: #FFFFFF;
@@ -938,7 +977,6 @@ body.menu-open {
     margin-bottom: 20px;
 }
 
-/* Кнопка "Записаться" */
 .services-card__btn {
     display: inline-block;
     font-family: var(--font-body);
@@ -953,7 +991,6 @@ body.menu-open {
     border: 2px solid transparent;
 }
 
-/* На белой карточке: зелёная кнопка */
 .services-card:nth-child(odd) .services-card__btn {
     background-color: var(--color-primary);
     color: #FFFFFF;
@@ -966,7 +1003,6 @@ body.menu-open {
     border-color: var(--color-primary);
 }
 
-/* На зелёной карточке: белая кнопка */
 .services-card:nth-child(even) .services-card__btn {
     background-color: #FFFFFF;
     color: var(--color-primary);
@@ -979,7 +1015,6 @@ body.menu-open {
     border-color: #FFFFFF;
 }
 
-/* Кнопки слайдера */
 .services-slider__button {
     flex-shrink: 0;
     width: 48px;
@@ -1017,7 +1052,6 @@ body.menu-open {
     transform: none;
 }
 
-/* === Адаптивность === */
 @media (max-width: 1200px) {
     .services__container {
         padding: 0 40px;
@@ -1060,7 +1094,6 @@ body.menu-open {
         gap: 16px;
     }
 
-    /* На мобильных: одна карточка, все белые */
     .services-card {
         flex: 0 0 100%;
         background-color: #FFFFFF !important;
@@ -1085,7 +1118,6 @@ body.menu-open {
         color: #6B6B6B !important;
     }
 
-    /* На мобильных кнопка всегда зелёная */
     .services-card .services-card__btn {
         background-color: var(--color-primary) !important;
         color: #FFFFFF !important;
@@ -1130,7 +1162,6 @@ body.menu-open {
 }
 
 
-/* === Секция сертификатов === */
 .certificates {
     padding: 80px 0;
     background-color: var(--color-primary);
@@ -1172,7 +1203,6 @@ body.menu-open {
     will-change: transform;
 }
 
-/* Слайд: по умолчанию замылен и уменьшен (соседние) */
 .cert-slider__slide {
     position: relative;
     flex: 0 0 auto;
@@ -1184,7 +1214,6 @@ body.menu-open {
     z-index: 1;
 }
 
-/* Активный слайд: чёткий, крупный, поверх остальных */
 .cert-slider__slide.active {
     filter: blur(0);
     opacity: 1;
@@ -1201,7 +1230,6 @@ body.menu-open {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
-/* Кнопки навигации */
 .cert-slider__button {
     position: absolute;
     top: 50%;
@@ -1248,7 +1276,6 @@ body.menu-open {
     color: #FFFFFF;
 }
 
-/* Точки и счётчик */
 .cert-slider__footer {
     display: flex;
     align-items: center;
@@ -1286,7 +1313,6 @@ body.menu-open {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* === Адаптивность === */
 @media (max-width: 1200px) {
     .cert-slider__slide img {
         height: 420px;
@@ -1345,7 +1371,6 @@ body.menu-open {
     }
 }
 
-/* === Секция О нас === */
 .about {
     padding: 100px 0;
     background-color: var(--color-bg);
@@ -1361,12 +1386,10 @@ body.menu-open {
     align-items: center;
 }
 
-/* Фото с рамкой */
 .about__photo {
     position: relative;
 }
 
-/* Смещённый контур позади фото */
 .about__photo::before {
     content: '';
     position: absolute;
@@ -1399,7 +1422,6 @@ body.menu-open {
     transform: scale(1.03);
 }
 
-/* Бейдж с опытом */
 .about__photo-badge {
     position: absolute;
     left: -36px;
@@ -1430,7 +1452,6 @@ body.menu-open {
     line-height: 1.4;
 }
 
-/* Текстовый блок */
 .about__label {
     display: inline-block;
     font-family: var(--font-body);
@@ -1470,7 +1491,6 @@ body.menu-open {
     margin: 32px 0;
 }
 
-/* Преимущества */
 .about__features {
     list-style: none;
     display: grid;
@@ -1505,7 +1525,6 @@ body.menu-open {
     justify-content: center;
 }
 
-/* Подпись */
 .about__signature {
     display: flex;
     align-items: center;
@@ -1530,7 +1549,6 @@ body.menu-open {
     line-height: 1.5;
 }
 
-/* === Адаптивность === */
 @media (max-width: 1200px) {
     .about__container {
         grid-template-columns: 400px 1fr;
@@ -1629,7 +1647,6 @@ body.menu-open {
     }
 }
 
-/* Футер */
 .footer {
     background-color: var(--color-primary);
     color: #FFFFFF;
@@ -1643,7 +1660,6 @@ body.menu-open {
     padding: 0 60px;
 }
 
-/* Верхняя часть */
 .footer__top {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -1651,7 +1667,6 @@ body.menu-open {
     margin-bottom: 60px;
 }
 
-/* Левая колонка: информация */
 .footer__info {
     display: flex;
     flex-direction: column;
@@ -1701,7 +1716,6 @@ body.menu-open {
     opacity: 0.7;
 }
 
-/* Иконки соцсетей в футере */
 .footer__icons {
     display: flex;
     gap: 20px;
@@ -1722,7 +1736,6 @@ body.menu-open {
     height: 27px;
 }
 
-/* ВК сделаем чуть крупнее, как было */
 .footer__icon:last-child svg {
     width: 30px;
     height: 30px;
@@ -1742,7 +1755,6 @@ body.menu-open {
     margin-top: 10px;
 }
 
-/* Правая колонка: карта */
 .footer__map {
     width: 100%;
     height: 350px;
@@ -1756,7 +1768,6 @@ body.menu-open {
     border: none;
 }
 
-/* Нижняя часть: правовая информация */
 .footer__bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1819,7 +1830,6 @@ body.menu-open {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Адаптивность футера */
 @media (max-width: 1024px) {
     .footer__container {
         padding: 0 40px;
@@ -1881,55 +1891,219 @@ body.menu-open {
 
 
 
+/* =============================================
+   HOVER-ЭФФЕКТЫ — ТОЛЬКО для мыши
+   ============================================= */
+@media (hover: hover) and (pointer: fine) {
 
-/* === Фикс "залипшего" ховера на тач-устройствах === */
-@media (hover: none) and (pointer: coarse) {
-
-    /* 1. Сбрасываем "залипший" hover, убирая трансформации */
-    .header__cta:hover,
-    .header__icon:hover,
-    .hero__cta:hover,
-    .slider__button:hover,
-    .slider__dot:hover,
-    .footer__icon:hover {
-        transform: none;
+    /* Хедер */
+    .header__menu-item:hover {
+        color: var(--color-primary);
     }
 
-    /* Для кнопок слайдера важно сохранить центрирование по вертикали */
-    .slider__button:hover {
-        transform: translateY(-50%);
+    .header__menu-item:hover::after {
+        width: 100%;
     }
 
-    /* 2. Переносим визуальные эффекты на :active (момент касания) */
-
-    /* Кнопки записи */
-    .header__cta:active,
-    .hero__cta:active {
+    .header__cta:hover {
+        background-color: var(--color-primary-dark);
+        border-color: var(--color-primary-dark);
         transform: translateY(-2px);
         box-shadow: 0 6px 16px rgba(74, 107, 87, 0.3), 0 0 30px rgba(74, 107, 87, 0.5);
     }
 
-    /* Иконки в хедере */
-    .header__icon:active {
+    .header__icon:hover {
+        color: var(--color-primary-dark);
         transform: translateY(-2px) scale(1.1);
     }
 
-    /* Иконки в футере */
-    .footer__icon:active {
-        color: #d2d1cf;
+    .header__burger:hover {
+        color: var(--color-primary-dark);
+    }
+
+    .header__mobile-menu-item:hover {
+        color: var(--color-primary);
+    }
+
+    .header__mobile-cta:hover {
+        background-color: var(--color-primary-dark);
         transform: translateY(-2px);
     }
 
-    /* Кнопки слайдера */
-    .slider__button:active {
-        transform: translateY(-50%) scale(0.95);
+    .header__mobile-icon:hover {
+        color: var(--color-primary-dark);
+        transform: scale(1.1);
+    }
+
+    /* Hero */
+    .hero__cta:hover {
+        background-color: var(--color-primary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(74, 107, 87, 0.5), 0 0 32px rgba(74, 107, 87, 0.4);
+    }
+
+    /* Галерея */
+    .slider__button:hover {
+        background-color: var(--color-primary);
+        color: var(--color-bg);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .slider__dot:hover {
+        background-color: var(--color-primary);
+        opacity: 0.5;
+    }
+
+    .slider__image-placeholder:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 24px rgba(74, 107, 87, 0.15);
+    }
+
+    /* Услуги */
+    .services__tab:hover {
+        background-color: var(--color-primary);
+        color: #FFFFFF;
+    }
+
+    .services-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .services-card:nth-child(odd) .services-card__btn:hover {
+        background-color: #FFFFFF;
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+    }
+
+    .services-card:nth-child(even) .services-card__btn:hover {
+        background-color: var(--color-primary);
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+    }
+
+    .services-slider__button:hover:not(:disabled) {
+        background-color: var(--color-primary);
+        color: var(--color-bg);
+        transform: scale(1.1);
+    }
+
+    /* Сертификаты */
+    .cert-slider__button:hover:not(:disabled) {
+        background-color: #FFFFFF;
+        color: var(--color-primary);
+    }
+
+    /* О нас */
+    .about__photo-frame:hover img {
+        transform: scale(1.03);
+    }
+
+    /* Футер */
+    .footer__phone:hover {
+        opacity: 0.7;
+    }
+
+    .footer__icon:hover {
+        opacity: 0.7;
+        transform: translateY(-2px);
+    }
+
+    .footer__legal-link:hover {
+        color: #FFFFFF;
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+
+    /* Хедер */
+    .header__menu-item:active {
+        color: var(--color-primary);
+    }
+
+    .header__cta:active {
+        background-color: var(--color-primary-dark);
+        border-color: var(--color-primary-dark);
+        box-shadow: 0 6px 16px rgba(74, 107, 87, 0.3), 0 0 30px rgba(74, 107, 87, 0.5);
+    }
+
+    .header__icon:active {
+        color: var(--color-primary-dark);
+        transform: scale(1.1);
+    }
+
+    .header__burger:active {
+        color: var(--color-primary-dark);
+    }
+
+    .header__mobile-menu-item:active {
+        color: var(--color-primary);
+    }
+
+    .header__mobile-cta:active {
+        background-color: var(--color-primary-dark);
+    }
+
+    .header__mobile-icon:active {
+        color: var(--color-primary-dark);
+        transform: scale(1.1);
+    }
+
+    /* Hero */
+    .hero__cta:active {
+        background-color: var(--color-primary-dark);
+        box-shadow: 0 8px 24px rgba(74, 107, 87, 0.5), 0 0 32px rgba(74, 107, 87, 0.4);
+    }
+
+    /* Галерея */
+    .slider__button:active:not(:disabled) {
         background-color: var(--color-primary);
         color: var(--color-bg);
     }
 
-    /* Точки слайдера */
     .slider__dot:active {
         background-color: var(--color-primary);
-        transform: scale(1.2);
+    }
+
+    /* Услуги */
+    .services__tab:active {
+        background-color: var(--color-primary);
+        color: #FFFFFF;
+    }
+
+    .services-card:nth-child(odd) .services-card__btn:active {
+        background-color: #FFFFFF;
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+    }
+
+    .services-card:nth-child(even) .services-card__btn:active {
+        background-color: var(--color-primary);
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+    }
+
+    .services-slider__button:active:not(:disabled) {
+        background-color: var(--color-primary);
+        color: var(--color-bg);
+    }
+
+    /* Сертификаты */
+    .cert-slider__button:active:not(:disabled) {
+        background-color: #FFFFFF;
+        color: var(--color-primary);
+    }
+
+    /* Футер */
+    .footer__phone:active {
+        opacity: 0.7;
+    }
+
+    .footer__icon:active {
+        opacity: 0.7;
+    }
+
+    .footer__legal-link:active {
+        color: #FFFFFF;
     }
 }
