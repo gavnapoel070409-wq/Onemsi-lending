@@ -857,6 +857,7 @@ body.menu-open {
     background-color: #FFFFFF;
     border: 1px solid #E8EFEA;
     border-radius: 16px;
+    margin-top: 25px;
     padding: 24px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
